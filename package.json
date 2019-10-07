@@ -1,5 +1,5 @@
 {
-  "name": "js-build-by-feature-map-service",
+  "name": "js-build-by-feature-map-express-service",
   "version": "0.0.1",
   "description": "",
   "main": "dist/index.js",
