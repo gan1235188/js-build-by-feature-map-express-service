@@ -3,7 +3,8 @@
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "sourceMap": false,
-    "noImplicitAny": true,
+    "allowJs": true,
+    "noImplicitAny": false,
     "target": "es5"
   }
 }
