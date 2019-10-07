@@ -6,5 +6,10 @@
     "allowJs": true,
     "noImplicitAny": false,
     "target": "es5"
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "*.js"
+  ]
 }
