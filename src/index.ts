@@ -39,14 +39,14 @@ function mergeFeatureMap(...featureMaps: featureMap[]): featureMap {
   let featureMap: featureMap = {}
   featureMaps.forEach(_featureMap => {
     if (typeof _featureMap === 'object') {
-      featureMaps = {
+      featureMap = {
         ...featureMap,
         ..._featureMap
       }
     }
   })
 
-  return featureMaps
+  return featureMap
 }
 
 
