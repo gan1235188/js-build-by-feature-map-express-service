@@ -1,6 +1,6 @@
 {
   "name": "js-build-by-feature-map-express-service",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -10,11 +10,11 @@
   "license": "ISC",
   "devDependencies": {
     "@types/express": "^4.17.1",
-    "@types/webpack": "^4.39.2",
+    "@types/webpack": "^4.39.3",
     "express": "^4.17.1",
     "ts-loader": "^6.2.0",
-    "typescript": "^3.6.3",
-    "webpack": "^4.41.0",
+    "typescript": "^3.6.4",
+    "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
     "webpack-node-externals": "^1.7.2"
   },
