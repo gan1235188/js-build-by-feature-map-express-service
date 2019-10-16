@@ -17,15 +17,20 @@ interface dynamicProperty {
   [key: string]: any
 }
 
-export function service(app: express.Express, serviceConfig: serviceConfig, express: any) {
-  serviceConfig.configs.forEach(config => {
-    app.use(config.route, async (req, res, next) => {
-      const cookieFeatureMap = getFeatureMapFromHeaders(req.headers)
-      const featureMap = mergeFeatureMap(cookieFeatureMap, serviceConfig.featureMap)
+export function createBuild(webpackConfig: webpack.Configuration, featureMap: featureMap = {}) {
+  return async function toBuild(req: express.Request) {
+    const cookieFeatureMap = getFeatureMapFromHeaders(req.headers)
+    const allFeatureMap = mergeFeatureMap(cookieFeatureMap, featureMap)
+  
+    return await build(allFeatureMap, webpackConfig)
+  }
+}
 
-      await build(featureMap, config.webpackConfig)
-      const handler = express.static(config.webpackConfig.output.path)
-      handler(req, res, next)
+export function service(app: express.Express, serviceConfig: serviceConfig) {
+  serviceConfig.configs.forEach(config => {
+    const buildFn = createBuild(config.webpackConfig, serviceConfig.featureMap)
+    app.use(config.route, (req: express.Request) => {
+      buildFn(req)
     })
   })
 }
