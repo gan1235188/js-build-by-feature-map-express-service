@@ -1,10 +1,10 @@
 {
   "name": "js-build-by-feature-map-express-service",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build": "webpack"
+    "build": "tsc"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +21,6 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "js-build-by-feature-map": "latest",
-    "js-feature-test": "0.0.3"
+    "js-feature-test": "latest"
   }
 }

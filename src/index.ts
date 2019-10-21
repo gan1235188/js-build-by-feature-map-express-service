@@ -85,7 +85,8 @@ export function service(app: express.Express, serviceConfig: singleConfig) {
       //过期时间为15天
       expires: new Date(new Date().getTime() + 1000 * 60 * 60 * 24 * 15),
       path: '/',
-      signed: false
+      signed: false,
+      sameSite: 'Strict'
     })
     res.send()
   })
