@@ -1,6 +1,6 @@
 {
   "name": "js-build-by-feature-map-express-service",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -19,6 +19,8 @@
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
-    "js-build-by-feature-map": "latest"
+    "body-parser": "^1.19.0",
+    "js-build-by-feature-map": "latest",
+    "js-feature-test": "0.0.3"
   }
 }
